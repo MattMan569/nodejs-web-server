@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
+const getRandFile = require('./../utils/getRandFile');
 
 const app = express();
 
@@ -8,6 +9,7 @@ const app = express();
 const publicDirectoryPath = path.join(__dirname, '/../public');
 const viewsPath = path.join(__dirname, '../templates/views');
 const partialsPath = path.join(__dirname, '../templates/partials');
+const fileNotFoundImgPath = path.join(__dirname, './../public/img/404');
 
 // Setup handlebars engine and views location
 app.set('view engine', 'hbs');
@@ -52,6 +54,7 @@ app.get('/help/*', (req, res) => {
     res.render('404', {
         title: '404',
         name: 'Matthew Polsom',
+        file: getRandFile(fileNotFoundImgPath),
         errorText: `Help page ${req.url.slice(req.url.lastIndexOf('/') + 1)} not found`,
     });
 });
@@ -60,6 +63,7 @@ app.get('*', (req, res) => {
     res.render('404', {
         title: '404',
         name: 'Matthew Polsom',
+        file: getRandFile(fileNotFoundImgPath),
         errorText: 'Page not found',
     });
 });
