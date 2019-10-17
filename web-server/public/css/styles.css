@@ -43,3 +43,20 @@ header a {
 .img404 {
     width: 250px;
 }
+
+input {
+    border: 1px solid #cccccc;
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    border: 1px solid #888888;
+    background: #888888;
+    color: white;
+    padding: 8px;
+}
+
+button:hover {
+    background: #777777;
+}
