@@ -9,7 +9,7 @@
     "url": "https://github.com/MattMan569/The-Complete-Node.js-Developer-Course/tree/master/web-server"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/app.js"
   },
   "keywords": [
     "node",
