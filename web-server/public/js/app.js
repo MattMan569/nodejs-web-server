@@ -9,7 +9,7 @@ document.querySelector('form').addEventListener('submit', (event) => {
     message2.textContent = '';
 
     (async () => {
-        const response = await fetch(`http://localhost:3000/weather?address=${search.value}`);
+        const response = await fetch(`/weather?address=${search.value}`);
         const data = await response.json();
 
         if (data.error) {
