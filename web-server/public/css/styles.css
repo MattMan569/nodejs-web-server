@@ -80,3 +80,7 @@ button {
 button:hover {
     background: #666666;
 }
+
+#message-1, #message-2 {
+    white-space: pre;
+}
