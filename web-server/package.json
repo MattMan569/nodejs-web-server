@@ -8,6 +8,7 @@
     "type": "git",
     "url": "https://github.com/MattMan569/The-Complete-Node.js-Developer-Course/tree/master/web-server"
   },
+  "homepage": "https://polsom-weather-application.herokuapp.com",
   "scripts": {
     "start": "node src/app.js"
   },
