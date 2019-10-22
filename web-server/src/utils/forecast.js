@@ -13,7 +13,9 @@ const forecast = (longitude, latitude, callback) => {
             callback(undefined,
                 `${body.daily.data[0].summary}` +
                 ` It is currently ${body.currently.temperature}°C` +
-                ` with a ${body.currently.precipProbability}% chance of rain`);
+                ` with a ${body.currently.precipProbability}% chance of rain.` +
+                `\nThe high today is ${body.daily.data[0].temperatureMax}°C` +
+                ` and the low today is ${body.daily.data[0].temperatureMin}°C.`);
         }
     });
 };
